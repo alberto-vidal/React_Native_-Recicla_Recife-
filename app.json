@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "Recicle_Recife",
+    "slug": "Recicle_Recife",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "Recicle_Recife"
+}
