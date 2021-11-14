@@ -2,12 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, View, Button, Image} from 'react-native';
 import Header from './components/Header';
 
-const Separator = () => (
-    <View style={styles.separator} />
-    
-  );
-
-export default function Page_01() {
+const Page_01 = ({navigation}) => {
   return (
     <>
       <Header title={("Recicla Recife"+"\n"+"Menu")}></Header>
@@ -15,6 +10,7 @@ export default function Page_01() {
         <Button
             title="Informativo"
             color="#0D9CFA"
+            onPress = {() => navigation.navigate('Page_01_01')}
         />
         <Button
             title="Coleta de Lixo"
@@ -33,6 +29,8 @@ export default function Page_01() {
     
   );
 }
+
+export default Page_01
 
 const styles = StyleSheet.create({
   container: {

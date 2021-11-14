@@ -13,14 +13,15 @@ const Header = (props) => {
 
 const styles = StyleSheet.create({
     container: {
-        paddingTop: 30,
-        paddingBottom: 20,
+        paddingTop: 40,
+        paddingBottom: 40,
         backgroundColor: '#0BCF05',
         alignItems: 'center',
         justifyContent: "space-between",
         flexDirection: 'row',
         paddingRight: 10,
         paddingLeft: 10,
+        flex: 0,
     },
     headerText: {
         fontSize: 20,
