@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, View, Button, Image} from 'react-native';
 import Header from './components/Header';
 
-const Page_01 = ({navigation}) => {
+const Home = ({navigation}) => {
   return (
     <>
       <Header title={("Recicla Recife"+"\n"+"Menu")}></Header>
@@ -15,14 +15,17 @@ const Page_01 = ({navigation}) => {
         <Button
             title="Coleta de Lixo"
             color="#F21E1E"
+            onPress = {() => navigation.navigate('Page_02_01')}
         />
         <Button
             title="Ecopontos"
             color="#0BCF05"
+            onPress = {() => navigation.navigate('Page_03_01')}
         />
         <Button
             title="Denuncie"
             color="#E1CC06"
+            onPress = {() => navigation.navigate('Page_04_01')}
         />
       </View>
     </>
@@ -30,7 +33,7 @@ const Page_01 = ({navigation}) => {
   );
 }
 
-export default Page_01
+export default Home
 
 const styles = StyleSheet.create({
   container: {

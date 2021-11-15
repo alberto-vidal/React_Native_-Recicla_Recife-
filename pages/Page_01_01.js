@@ -5,10 +5,10 @@ import Header from './components/Header';
 const Page_01_01 = ({navigation}) => {
     return (
       <>
-        <Header title={("Recicla Recife"+"\n"+"Menu")}></Header>
+        <Header title={("Recicla Recife"+"\n"+"Informativo")}></Header>
         
         <View>
-            <TouchableOpacity style={styles.menu} onPress={() => navigation.navigate('Page_01')}>
+            <TouchableOpacity style={styles.menu} onPress={() => navigation.navigate('Home')}>
                 <Image style={{ width: 30, height: 30 }} source={require('./components/menu.png')}/> 
                 <Text style={styles.menutext}>Menu</Text>
             </TouchableOpacity>    
