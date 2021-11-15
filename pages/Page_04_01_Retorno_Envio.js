@@ -104,6 +104,7 @@ const Page_04_01_Retorno_Envio = ({navigation}) => {
     },
     box_Comentario:{
         paddingTop: 30,
+        alignItems: 'baseline',
         
     },
     texto_box:{
@@ -114,7 +115,7 @@ const Page_04_01_Retorno_Envio = ({navigation}) => {
         flex: 1,
     },
     info_comentario:{
-        width: 300,
+        width: 330,
         height: 100,
         margin: 12,
         borderWidth: 1,
