@@ -1,6 +1,7 @@
 import React from 'react';
-import { StyleSheet, Text, View, TouchableOpacity, Image, TextInput} from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity, Image, TextInput, Marker} from 'react-native';
 import Header from './components/Header';
+import MapView from 'react-native-maps';
 
 const Page_03_01 = ({navigation}) => {
     return (
@@ -9,7 +10,7 @@ const Page_03_01 = ({navigation}) => {
         
         <View>
             <TouchableOpacity style={styles.menu} onPress={() => navigation.navigate('Home')}>
-                <Image style={{ width: 30, height: 30 }} source={require('./components/menu.png')}/> 
+                <Image style={{ width: 30, height: 30 }} source={require('../assets/menu.png')}/> 
                 <Text style={styles.menutext}>Menu</Text>
             </TouchableOpacity>    
         </View>
@@ -19,8 +20,53 @@ const Page_03_01 = ({navigation}) => {
                 <Text style={styles.titulo}>
                     Locais de Coleta Seletiva{"\n"}(ECO)
                 </Text>
-                <Text>Mapa</Text>
             </View>
+            <MapView
+                    initialRegion={{
+                        latitude: -8.061787,
+                        longitude: -34.870696,
+                        latitudeDelta: 0.0042,
+                        longitudeDelta: 0.0031,
+                    }}
+                    style={styles.MapView}>
+                <MapView.Marker
+                    coordinate={{
+                        latitude: -8.063282,
+                        longitude: -34.871568,
+                    }}
+                    title={'Av. Marques de Olinda'}
+                    description={"Metal, Isopor, Papel, Plastico e Vidro"}
+                    image={require('../assets/marcador_01.png')}
+                />
+                <MapView.Marker
+                    coordinate={{
+                        latitude: -8.054732,
+                        longitude: -34.872078,
+                    }}
+                    title={'Av. Cais do Apolo'}
+                    description={"Metal, Isopor, Papel, Plastico e Vidro"}
+                    image={require('../assets/marcador_01.png')}
+                />
+                <MapView.Marker
+                    coordinate={{
+                        latitude: -8.061468,
+                        longitude: -34.871037,
+                    }}
+                    title={'Rua do Bom Jesus'}
+                    description={"Metal, Isopor, Papel, Plastico e Vidro"}
+                    image={require('../assets/marcador_01.png')}
+                />
+                <MapView.Marker
+                    coordinate={{
+                        latitude: -8.039065,
+                        longitude: -34.878321,
+                    }}
+                    title={'Av. Agamenon Magalhães'}
+                    description={"Lixo Organico, Metralhas, Eletronicos e Podas"}
+                    image={require('../assets/marcador_01.png')}
+                />    
+
+            </MapView>
             <View style={styles.grupo_Botoes}>
             <TouchableOpacity style={styles.botao_Voltar} onPress={() => navigation.navigate('Home')}>
                 <Text style={{color: "white"}}>Voltar</Text>
@@ -36,11 +82,11 @@ const Page_03_01 = ({navigation}) => {
 
   const styles = StyleSheet.create({
     container: {
-        flex: 3,
+        flex: 1,
         backgroundColor: '#C5FDC4',
         justifyContent: 'space-between',
         paddingTop: 10,
-        paddingBottom: 130,    
+        paddingBottom: 20,    
     },
     menu:{
         flexDirection: 'row',
@@ -64,12 +110,11 @@ const Page_03_01 = ({navigation}) => {
     },
     grupo_Botoes:{
         flexDirection: 'row',
-        flex:3,
         alignItems: 'center',
         backgroundColor: '#C5FDC4',
-        justifyContent: "space-around",
-        paddingBottom: 200,
-            
+        justifyContent: "center",
+        paddingTop: 15,
+        paddingBottom: 15,    
     },
     botao_Voltar:{
         backgroundColor: "#F21E1E",
@@ -78,5 +123,12 @@ const Page_03_01 = ({navigation}) => {
         width: 100,
         height: 30,
         borderRadius: 50,
+    },
+    MapView:{
+        width: 350,
+        height: 350,
+        margin: 5,
+        padding: 10,
+        
     },
   });

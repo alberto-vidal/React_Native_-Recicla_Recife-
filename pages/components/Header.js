@@ -4,9 +4,9 @@ import {StyleSheet, Text, View, Image} from 'react-native'
 const Header = (props) => {
     return (
         <View style={styles.container}>
-            <Image style={{ width: 60, height: 60 }} source={require('./reciclagem.png')}/>
+            <Image style={{ width: 60, height: 60 }} source={require('../../assets/reciclagem.png')}/>
             <Text style={styles.headerText}>{props.title}</Text>
-            <Image style={{ width: 60, height: 60 }} source={require('./reciclagem.png')}/>
+            <Image style={{ width: 60, height: 60 }} source={require('../../assets/reciclagem.png')}/>
         </View>
     )
 }

@@ -9,7 +9,7 @@ const Page_04_01_Retorno_Envio = ({navigation}) => {
         
         <View>
             <TouchableOpacity style={styles.menu} onPress={() => navigation.navigate('Home')}>
-                <Image style={{ width: 30, height: 30 }} source={require('./components/menu.png')}/> 
+                <Image style={{ width: 30, height: 30 }} source={require('../assets/menu.png')}/> 
                 <Text style={styles.menutext}>Menu</Text>
             </TouchableOpacity>    
         </View>

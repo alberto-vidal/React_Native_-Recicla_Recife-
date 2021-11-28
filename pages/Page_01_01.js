@@ -9,13 +9,13 @@ const Page_01_01 = ({navigation}) => {
         
         <View>
             <TouchableOpacity style={styles.menu} onPress={() => navigation.navigate('Home')}>
-                <Image style={{ width: 30, height: 30 }} source={require('./components/menu.png')}/> 
+                <Image style={{ width: 30, height: 30 }} source={require('../assets/menu.png')}/> 
                 <Text style={styles.menutext}>Menu</Text>
             </TouchableOpacity>    
         </View>
         
         <View style={styles.container}>
-            <Text>Clique em uma das opções abaixo para saber mais detalhes de como reciclar os materiais e ajudar ainda mais o trabalho de reciclagem em Recife.
+            <Text style={{textAlign: "center"}}>{'\n'}{'\n'}{'\n'}{'\n'}Clique em uma das opções abaixo para saber mais detalhes de como reciclar os materiais e ajudar ainda mais o trabalho de reciclagem em Recife.
 
             </Text>
         </View>
